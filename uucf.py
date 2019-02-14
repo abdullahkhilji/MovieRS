@@ -8,7 +8,7 @@ def uucf(username):
     global person
     
     # point the client at mongo URI
-    client = MongoClient('mongodb://db_username:db_password_12345@moviers-shard-00-00-3hnlg.mongodb.net:27017,moviers-shard-00-01-3hnlg.mongodb.net:27017,moviers-shard-00-02-3hnlg.mongodb.net:27017/moviers?ssl=true&replicaSet=moviers-shard-0&authSource=admin&retryWrites=true/moviers')
+    client = MongoClient('mongodb://db_username:db_password_12345@moviers-shard-00-00-3hnlg.mongodb.net:27017,moviers-shard-00-01-3hnlg.mongodb.net:27017,moviers-shard-00-02-3hnlg.mongodb.net:27017/moviers?ssl=true&replicaSet=moviers-shard-0&authSource=admin&retryWrites=true')
     # select database
     db = client['moviers']
     # select the collection within the database
