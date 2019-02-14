@@ -13,7 +13,7 @@ def iicf(username):
     db = client['moviers']
     global person
     # select the collection within the database
-    ratings_mongodb = db.user_ratings_100836_test
+    ratings_mongodb = db.user_ratings_4570_new
     # convert entire collection to Pandas dataframe
     ratings = pd.DataFrame(list(ratings_mongodb.find()))
 

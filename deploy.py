@@ -48,7 +48,7 @@ def login_check():
 def register():
     if request.method == 'POST':
         users = mongo.db.users
-        user_ratings = mongo.db.user_ratings_100836_test
+        user_ratings = mongo.db.user_ratings_4570_new
         existing_user = users.find_one({'name': request.form['username']})
         if existing_user is None:
             hashpass = generate_password_hash(request.form['pass'], method='sha256')
@@ -70,7 +70,7 @@ def see_uucf_suggestions():
         movie_data = []
         #movies = ['1302', '1306', '1305', '1307', '1312', '1318', '1320', '1322', '1321', '1324', '1326']
         for i in movies:
-            movie_data.append(mongo.db.movies_9742_movie_id.find({'movie_id': i}))
+            movie_data.append(mongo.db.movies_174_new.find({'movie_id': i}))
 
         return render_template('see_uucf_suggestions.html', movies=movie_data)
     return render_template('login.html')
@@ -82,7 +82,7 @@ def see_iicf_suggestions():
         movies = iicf(session['username'])
         movie_data = []
         for i in movies:
-            movie_data.append(mongo.db.movies_9742_movie_id.find({'movie_id': i}))
+            movie_data.append(mongo.db.movies_174_new.find({'movie_id': i}))
         return render_template('see_iicf_suggestions.html', movies=movie_data)
     return render_template('login.html')
 
@@ -93,7 +93,7 @@ def see_mf_suggestions():
         movies = mf(session['username'])
         movie_data = []
         for i in movies:
-            movie_data.append(mongo.db.movies_9742_movie_id.find({'movie_id': i}))
+            movie_data.append(mongo.db.movies_174_new.find({'movie_id': i}))
         return render_template('see_mf_suggestions.html', movies=movie_data)
     return render_template('login.html')
 
@@ -102,15 +102,15 @@ def see_mf_suggestions():
 @app.route('/rate_movies')
 def rate_movies():
     if 'username' in session:
-        movies = mongo.db.movies_9742_movie_id.find({})
-        user = mongo.db.users_100836_test.find({'userId': session['username']})
+        movies = mongo.db.movies_174_new.find({})
+        user = mongo.db.users_4570_new.find({'userId': session['username']})
         return render_template('rate_movies.html', movies=movies, user=user)
     return render_template('login.html')
 
 
 @app.route('/submit_rate', methods=['POST'])
 def submit_rate():
-    user_ratings = mongo.db.user_ratings_100836_test
+    user_ratings = mongo.db.user_ratings_4570_new
     query = {"userId": session['username']}
     newvalues = {'$set': {request.form['movies']: request.form['rating']}}
     user_ratings.update_one(query, newvalues)
