@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <div class="jumbotron text-center">
+        <h1>Welcome</h1>
+        <p class="lead">Login into my Recommender System</p>
+
+        <form action="{{url_for('login_check')}}" method=POST>
+
+            <div class="form-group">
+                <label for="login-email">Email address</label>
+                <input type="text" id="login-email" class="form-control" name="username" placeholder="UserName">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" class="form-control" name="pass" placeholder="Password">
+                <br>
+                <button class="btn btn-primary" type="submit">
+                    Log In
+                </button>
+
+                <h6>
+                    {% if not test %}
+                        Please Enter the Correct Combination of your UserName and Password
+                    {% endif %}
+                </h6>
+            </div>
+
+            <div>
+                Didn't register yet ?
+                <a href="{{url_for('register')}}">Sign Up</a>
+            </div>
+
+        </form>
+
+
+    </div>
+
+{% endblock %}
+
+
