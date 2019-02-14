@@ -514,3 +514,7 @@ fabric.properties
 
 # ignore mongo_db database
 dataset/mongodb_data/
+
+
+#ignore virtual environment
+venv
