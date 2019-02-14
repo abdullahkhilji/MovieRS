@@ -42,6 +42,7 @@ def mf(username):
 
     user_rated_movies = []
     for movie in ratings_only_t.T:
+        yield 'a'
         if ratings_only.iloc[person][movie] != 0.0 and str(movie) in list_of_all_movies:
             user_rated_movies.append(str(movie))
 
@@ -62,6 +63,7 @@ def mf(username):
 
     fact = []
     for i in user_rated_movies:
+        yield 'a'
         for j in movie_title_list:
             if i == j:
                 fact.append(movie_title_list.index(i))
@@ -71,7 +73,9 @@ def mf(username):
 
     final_predict = []
     for i in range(len(corr_fact)):
+        yield 'a'
         for j in range(len(corr_fact[i])):
+            yield 'a'
             if corr_fact[i][j] >= 0.9:
                 final_predict.append([i, j, corr_fact[i][j]])
 
