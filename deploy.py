@@ -10,7 +10,7 @@ from mf import mf
 app = Flask(__name__)
 
 
-app.config['MONGO_URI'] = 'mongodb://db_username:db_password_12345@moviers-shard-00-00-3hnlg.mongodb.net:27017,moviers-shard-00-01-3hnlg.mongodb.net:27017,moviers-shard-00-02-3hnlg.mongodb.net:27017/test?ssl=true&replicaSet=moviers-shard-0&authSource=admin&retryWrites=true'
+app.config['MONGO_URI'] = 'mongodb://db_username:db_password_12345@moviers-shard-00-00-3hnlg.mongodb.net:27017,moviers-shard-00-01-3hnlg.mongodb.net:27017,moviers-shard-00-02-3hnlg.mongodb.net:27017/moviers?ssl=true&replicaSet=moviers-shard-0&authSource=admin&retryWrites=true'
 app.config['MONGO_DB'] = 'moviers'
 app.secret_key = 'super secret key'
 
