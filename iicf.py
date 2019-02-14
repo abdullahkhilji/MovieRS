@@ -39,7 +39,6 @@ def iicf(username):
     user_rated_movies = []
 
     for movie in ratings_only_t.T:
-        yield 'a'
         if ratings_only.iloc[person][movie] != 0.0 and str(movie) in list_of_all_movies:
             user_rated_movies.append(str(movie))
 
@@ -50,14 +49,12 @@ def iicf(username):
 
     corr_all_scores = []
     for seen_movie in user_rated_movies:
-        yield 'a'
         corr_movie_i = ratings_only_drop.corrwith(ratings_only_user.loc[:, seen_movie])
         corr_all_scores.append(corr_movie_i)
 
     # get ratings list
     ratings_list = []
     for seen_movie in user_rated_movies:
-        yield 'a'
         ratings_list.append(ratings_only.iloc[person][seen_movie])
 
     corr_all_scores_df = pd.DataFrame(corr_all_scores)
