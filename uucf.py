@@ -8,7 +8,7 @@ def uucf(username):
     # point the client at mongo URI
     client = MongoClient('mongodb://db_username:db_password_12345@moviers-shard-00-00-3hnlg.mongodb.net:27017,moviers-shard-00-01-3hnlg.mongodb.net:27017,moviers-shard-00-02-3hnlg.mongodb.net:27017/test?ssl=true&replicaSet=moviers-shard-0&authSource=admin&retryWrites=true/moviers')
     # select database
-    db = client['movie_data']
+    db = client['moviers']
     # select the collection within the database
     ratings_mongodb = db.user_ratings_100836_test
     # convert entire collection to Pandas dataframe
