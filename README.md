@@ -127,7 +127,7 @@ It is suggested that the user rate at least 20 of the movies, effectively taking
 In UUCF the main idea is that, the algorithm finds the User's most similar to the current User and calculates the ratings of the movies he has not rated by the similarity score. The similarity is based on Pearson Correlation.
 ### 2.2. Item Item Collaborative Filtering (IICF)
 In IICF the algorithm selects the movies most closest to the movies the user has already rated and takes this similarity score and ratings of the movies the user has rated into consideration and gives suggestions based on the highest ratings predicted. The similarity is based on Pearson Correlation.
-### 3.3. Matrix Factorisation (MF)
+### 2.3. Matrix Factorisation (MF)
 The strength of matrix factorization is the that it can gather information that are not seen directly but can be visualized by analyzing user's behavior. Using this criteria we can judge the user's opinion regarding th particular movie. This method is the most viable option for recommender systems.
 
 
@@ -143,7 +143,6 @@ The Gunicorn "Green Unicorn" is a Python Web Server Gateway Interface HTTP serve
 
 
 # 4. Docker Container
-### 4.2. Dockerfile
 The `Dockerfile`  is included in the root of this repository, and can be build from within this directory using:
 
 ```
