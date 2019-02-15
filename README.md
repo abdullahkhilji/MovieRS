@@ -89,6 +89,8 @@ It is suggested that the user rate at least 20 of the movies, effectively taking
 In UUCF the main idea is that, the algorithm finds the User's most similar to the current User and calculates the ratings of the movies he has not rated by the similarity score. The similarity is based on Pearson Correlation.
 ### 2.2. Item Item Collaborative Filtering (IICF)
 In IICF the algorithm selects the movies most closest to the movies the user has already rated and takes this similarity score and ratings of the movies the user has rated into consideration and gives suggestions based on the highest ratings predicted. The similarity is based on Pearson Correlation.
+### 3.3. matrix Factorisation (MF)
+
 
 
 
@@ -104,13 +106,10 @@ The Gunicorn "Green Unicorn" is a Python Web Server Gateway Interface HTTP serve
 
 ## 4. Docker Container
 ### 4.2. Dockerfile
-The `Dockerfile`  is included in the root of this repository, and can be build from within this directory by running `docker build --tag=moviers .`  to build and `docker run -p 5000:7000 moviers` to map the port `5000` of the docker container to your machines port: `7000` this can be easily conffigured as per your requirements.  Then visit `localhost:7000` in your web-browser, make sure to exclude local servers, if you are on a PROXY based network.
+The `Dockerfile`  is included in the root of this repository, and can be build from within this directory by running `docker build --tag=moviers .`  to build and `docker run -p 5000:5000 moviers` to map the port `5000` of the docker container to your machines port: `5000` this can be easily conffigured as per your requirements.  Then visit `localhost:5000` in your web-browser.
 
-### 4.2. Alpine Linux
-For the docker conatiner Alpine Linux is used to facilitate faster deployment of the app in realtime, due to it's small size coupled with a great Alpine Linux Package manager also known as apk. The size of  `3.6-alpine` python package is of 92.1MB size. 
 
-## An Important Note
-Here, it is worthy to note that this repository is used in deploying code directly to Heroku and thus the docker specific files as stored in `docker_content` folder present in this repository but not mentioned in the above tree (for minimizing redundancy). Docker uses only the files stored in `docker_content` and thus you can safely make changes there.
+
 
 
 
