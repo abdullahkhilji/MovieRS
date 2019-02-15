@@ -15,6 +15,9 @@
 
             <div class="director">Directed By: {{item[0].director}}</div>
             <div class="year_of_release">{{item[0].year_of_release}}</div>
+            <br>
+            IMDb Rating:
+            <div class="year_of_release">{{item[0].imdb_rating}}</div>
             <!--<img src="/images/{{item[0].imdb_id}}.jpg" alt="image">-->
 
             <img class="img-thumbnail thumbnail-class" src="{{ url_for('static', filename = '') }}images/{{item[0].imdb_id}}.jpg" alt="thumbnail_image">
