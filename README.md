@@ -115,6 +115,9 @@ By undertaking a array of analysis, 10 movies were chosen from each Genre viz. C
 ### 1.3. Populating the User's Rating Table
 For our algorithm to be effective enough atleast for the first two, it requires that it it has enough user ratings. Thus,  a  `ratings_to_mongodb.py`  script under was written to capture ratings present in each line and populate the database only for the movies taken into consideration. It takes `final_ratings.csv` (a file similar to `ratings.csv` but containing only those ratings for which we have stored the data in our database) and updates the ratings value in the Movies x Users table in the mongoDB database.
 
+### 1.4. The Mongo Database
+All the database for this project is hosted at MongoDB Atlas free clusters. The same database is synced across the Heroku deployement as well as in Docker.
+
 
 
 
