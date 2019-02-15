@@ -1,0 +1,32 @@
+MovieRS
+├── Dockerfile
+├── Procfile
+├── README.md
+├── deploy.py
+├── directory_tree.txt
+├── iicf.py
+├── mf.py
+├── movies_174_new.json
+├── requirements.txt
+├── static
+│   ├── bootstrap.min.css
+│   ├── bootstrap.min.js
+│   ├── images
+│   ├── jquery.min.js
+│   └── new.css
+├── templates
+│   ├── dashboard.html
+│   ├── includes
+│   │   └── _navbar.html
+│   ├── index.html
+│   ├── layout.html
+│   ├── login.html
+│   ├── rate_movies.html
+│   ├── register.html
+│   ├── see_iicf_suggestions.html
+│   ├── see_mf_suggestions.html
+│   └── see_uucf_suggestions.html
+├── user_ratings_4570_new.json
+└── uucf.py
+
+4 directories, 25 files
