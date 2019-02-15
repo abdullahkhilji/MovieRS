@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1>Movies</h1>
+
+<form class="pure-form pure-form-stacked" method="POST" action="{{url_for('submit_rate')}}"><fieldset>
+    <label for="movies_list">Movies</label>
+    <select name="movies" id="movies_list">
+    {% for item in movies %}
+        <option value="{{item.movie_id}}">{{item.title}}</option>
+    {% endfor %}
+    </select>
+    <label for="ratings_list">Rating</label>
+    <select name="rating" id="ratings_list">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
+    <button type="submit" class="pure-button pure-button-primary">Submit My Rating</button>
+</fieldset></form>
+
+
+
+
+
+{% endblock %}
+
+

@@ -1,0 +1,21 @@
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+.movie_display{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.thumbnail-class{
+    position: relative;
+    left: 10px;
+}
+
+.director{
+
+}

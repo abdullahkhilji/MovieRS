@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieRS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'new.css') }}">
+</head>
+<body>
+
+    {% include 'includes/_navbar.html' %}
+
+    <div class="container">
+        {% block body %}{% endblock %}
+
+    </div>
+
+    <script src="{{ url_for('static', filename = 'jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'bootstrap.min.js') }}"></script>
+</body>
+</html>
