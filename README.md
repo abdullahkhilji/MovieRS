@@ -102,8 +102,12 @@ Werkzeug==0.14.1 <br>
 For scraping the data  from IMDb website, Scrapy (a free open-source web-crawling framework written in python was utilised). It is similar to selenium but with an added in-built ability to HTML, process data and save it.
 Thus using the in-built pipelines, the process of extracting the data from the webpage of each movie and directly connecting it to mongDB and downloading thumbnails for each Movie was greatly streamlined.
 
-### 1.3. Scrapy
+### 1.1. Scrapy
 The scrapy spider files are stored  under `scrapy_spiders`  it also includes the CSV files of the scrapped data. The initial dataset was procured from [http://files.grouplens.org/datasets/movielens/ml-latest-small.zip](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)
+
+#### 1.1.1. MovieLens Dataset Description
+>This dataset (ml-latest-small) describes 5-star rating and free-text tagging activity from MovieLens, a movie recommendation service. It contains 100836 ratings and 3683 tag applications across 9742 movies. These data >were created by 610 users between March 29, 1996 and September 24, 2018. This dataset was generated on September 26, 2018. Users were selected at random for inclusion. All selected users had rated at least 20 >movies. The data are contained in the files links.csv, movies.csv, ratings.csv and tags.csv. 
+
 
 ### 1.2. Populating the Movies Table
 By undertaking a array of analysis, 10 movies were chosen from each Genre viz. Comedy, Drama, Action, Adventure, Crime, Horror, Documentary, Animation, Children, Thriller, Sci-Fi, Mystery, Fantasy, Romance, Western, Musical and Film-Noir with the exception of War which had only 4. Thus a total list of 174 movies was curated from the MovieLens dataset and the respective data extracted from the IMDb webpages. (This system can easily be scaled to accomodate all 9704 movies and the corresponding 100836 ratings, but since due to the limited resources given by the free Heroku plan, the scalability issue persisted. The full size extracted data is also included in this repository in /full_size ) 
