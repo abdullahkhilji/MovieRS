@@ -11,11 +11,15 @@ MovieRS
 ├── Dockerfile
 ├── Procfile
 ├── README.md
+├── boot.sh
 ├── deploy.py
 ├── directory_tree.txt
+├── docker_run.py
 ├── iicf.py
 ├── mf.py
-├── movies_174_new.json
+├── mongodb_collections
+│   ├── movies_174_new.json
+│   └── user_ratings_4570_new.json
 ├── requirements.txt
 ├── static
 │   ├── bootstrap.min.css
@@ -35,36 +39,66 @@ MovieRS
 │   ├── see_iicf_suggestions.html
 │   ├── see_mf_suggestions.html
 │   └── see_uucf_suggestions.html
-├── user_ratings_4570_new.json
-└── uucf.py
+├── uucf.py
+└── workflow
+├── movielens_data
+│   ├── links.csv
+│   └── ratings.csv
+├── new_data
+│   ├── final_data_to_scrap.csv
+│   └── final_ratings.csv
+├── ratings_to_mongodb.py
+├── scrapy_spiders
+│   └── scrap_imdb
+│       ├── scrap_imdb
+│       │   ├── __init__.py
+│       │   ├── items.py
+│       │   ├── middlewares.py
+│       │   ├── pipelines.py
+│       │   ├── settings.py
+│       │   └── spiders
+│       │       ├── SpiderCrawl.py
+│       │       ├── Untitled.ipynb
+│       │       ├── __init__.py
+│       │       ├── final_data.csv
+│       │       ├── images_174_new
+│       │       │   └── full
+│       │       ├── log.txt
+│       │       └── test.txt
+│       └── scrapy.cfg
+└── scripts_and_ipynb
+├── add_movie_id.py
+├── dataset.ipynb
+└── get_only_new_movies_ratings.ipynb
 
-4 directories, 25 files
+15 directories, 47 files
+
 
 ```
 
-Dependencies:
+#### Dependencies:
 
-Click==7.0
-Flask==1.0.2
-Flask-PyMongo==2.2.0
-gunicorn==19.9.0
-itsdangerous==1.1.0
-Jinja2==2.10
-MarkupSafe==1.1.0
-numpy==1.16.1
-pandas==0.24.1
-pymongo==3.7.2
-python-dateutil==2.8.0
-pytz==2018.9
-scikit-learn==0.20.2
-scipy==1.2.1
-six==1.12.0
-sklearn==0.0
-Werkzeug==0.14.1
+Click==7.0  <br>
+Flask==1.0.2 <br>
+Flask-PyMongo==2.2.0 <br>
+gunicorn==19.9.0 <br>
+itsdangerous==1.1.0 <br>
+Jinja2==2.10 <br>
+MarkupSafe==1.1.0 <br>
+numpy==1.16.1 <br>
+pandas==0.24.1 <br>
+pymongo==3.7.2 <br>
+python-dateutil==2.8.0 <br>
+pytz==2018.9 <br>
+scikit-learn==0.20.2 <br>
+scipy==1.2.1 <br>
+six==1.12.0 <br>
+sklearn==0.0 <br>
+Werkzeug==0.14.1 <br>
 
 
 
-## 1. Scraping the Data from IMDb
+# 1. Scraping the Data from IMDb
 For scraping the data  from IMDb website, Scrapy (a free open-source web-crawling framework written in python was utilised). It is similar to selenium but with an added in-built ability to HTML, process data and save it.
 Thus using the in-built pipelines, the process of extracting the data from the webpage of each movie and directly connecting it to mongDB and downloading thumbnails for each Movie was greatly streamlined.
 
@@ -81,7 +115,7 @@ For our algorithm to be effective enough atleast for the first two, it requires 
 
 
 
-## 2. Movie Recommendation System
+# 2. Movie Recommendation System
 After scraping and storing the data in mongoDB, three algorithms were utilised to predict the ratings for the particular user in consideration and top 10 movies were displayed.
 It is suggested that the user rate at least 20 of the movies, effectively taking the value of K as 20. This value is taken considering that All selected users had rated at least 20 movies as written in the README section of the MovieLens Dataset.
 
@@ -89,12 +123,12 @@ It is suggested that the user rate at least 20 of the movies, effectively taking
 In UUCF the main idea is that, the algorithm finds the User's most similar to the current User and calculates the ratings of the movies he has not rated by the similarity score. The similarity is based on Pearson Correlation.
 ### 2.2. Item Item Collaborative Filtering (IICF)
 In IICF the algorithm selects the movies most closest to the movies the user has already rated and takes this similarity score and ratings of the movies the user has rated into consideration and gives suggestions based on the highest ratings predicted. The similarity is based on Pearson Correlation.
-### 3.3. matrix Factorisation (MF)
+### 3.3. Matrix Factorisation (MF)
 
 
 
 
-## 3. Deploying to Heroku
+# 3. Deploying to Heroku
 The project was deployed to Heroku, by integrating it with GitHub the link to the website is [https://moviers.herokuapp.com/](https://moviers.herokuapp.com/)
 
 ### 3.1. Flask
@@ -104,7 +138,7 @@ For the backend of this project Flask was used. Flask is a micro web framework w
 The Gunicorn "Green Unicorn" is a Python Web Server Gateway Interface HTTP server.  Since Flask cannot serve multiple users at the same time, we serve the application using Gunicorn. 
 
 
-## 4. Docker Container
+# 4. Docker Container
 ### 4.2. Dockerfile
 The `Dockerfile`  is included in the root of this repository, and can be build from within this directory by running `docker build --tag=moviers .`  to build and `docker run -p 5000:5000 moviers` to map the port `5000` of the docker container to your machines port: `5000` this can be easily conffigured as per your requirements.  Then visit `localhost:5000` in your web-browser.
 
