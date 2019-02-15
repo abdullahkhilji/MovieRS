@@ -1,0 +1,9 @@
+        name_1 = response.xpath('//*[@id="title-overview-widget"]/div[1]/div[2]/div/div[2]/div[2]/h1/text()')
+        rating_3 = response.xpath('//*[@id="title-overview-widget"]/div[1]/div[2]/div/div[1]/div[1]/div[1]/strong/span/text()')
+        users_rated_4 = response.xpath('//*[@id="title-overview-widget"]/div[1]/div[2]/div/div[1]/div[1]/a/span/text()')
+        release_date_5 = response.xpath("//*[text()='Release Date:']/following-sibling::text()[1]")
+
+
+        country_15_1 = response.xpath("//*[text()='Country:']/following-sibling::a/text()")
+        country_15_2 = response.xpath("//*[text()='Country:']/following-sibling::a/following-sibling::a/text()")
+        country_15_2 = response.xpath("//*[text()='Country:']/following-sibling::a/following-sibling::a/following-sibling::a/text()")

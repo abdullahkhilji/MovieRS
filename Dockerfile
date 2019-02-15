@@ -1,33 +1,39 @@
 # Use an official Python runtime as a parent image
-FROM python:3.6
+FROM python:3.6-alpine
+
+RUN adduser -D moviers
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR /home/app
 
 # Copy the current directory contents into the container at /app
-COPY docker_content/. /app
+COPY docker_content/. /home/app
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
+COPY boot.sh /home/app/
 
-RUN apt-get update
-RUN apt-get -y install gnupg2
+
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/main' >> /etc/apk/repositories
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/community' >> /etc/apk/repositories
+
+
+RUN apk update
+RUN apk add gnupg mongodb=3.4.4-r0 
 
 ################## BEGIN INSTALLATION ######################
 # Install MongoDB Following the Instructions at MongoDB Docs
 # Ref: http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 
 # Add the package verification key
-RUN apt-key adv --no-tty --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+#RUN apt-key adv --no-tty --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 
 # Add MongoDB to the repository sources list
-RUN echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list
+#RUN echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list
 
 # Update the repository sources list once more
-RUN apt-get update
+#RUN apt-get update
 
 # Install MongoDB package (.deb)
-RUN apt-get -y --allow-unauthenticated install mongodb-10gen
+#RUN apt-get -y --allow-unauthenticated install mongodb-10gen
 
 # Create the default data directory
 RUN mkdir -p /data/db
@@ -41,13 +47,15 @@ CMD mongoimport --host mongodb --db moviers --collection movies_174_new --type j
 CMD mongoimport --host mongodb --db moviers --collection user_ratings_4570_new --type json --file /user_ratings_4570_new.json --jsonArray
 
 
-# make port 5000 available to the world outside
+RUN chmod +x /home/app/boot.sh
+
+ENV FLASK_APP moviers.py
+
+RUN chown -R moviers:moviers ./
+USER moviers
+
+
+
 EXPOSE 5000
-
-# Run app.py when the container launches
-#ENV PYTHONPATH /absolute/path/to/the/pythonpath/inside/the/container
-#ENTRYPOINT ["/usr/local/bin/gunicorn"]
-#CMD ["deploy.py"]
-
-CMD ["python", "deploy.py"]
+ENTRYPOINT ["./boot.sh"]
 

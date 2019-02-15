@@ -1,0 +1,175 @@
+,movieId,imdbId,title,genre
+0,1,114709,Toy Story (1995),Adventure|Animation|Children|Comedy|Fantasy
+1,2,113497,Jumanji (1995),Adventure|Children|Fantasy
+2,3,113228,Grumpier Old Men (1995),Comedy|Romance
+3,4,114885,Waiting to Exhale (1995),Comedy|Drama|Romance
+4,5,113041,Father of the Bride Part II (1995),Comedy
+5,6,113277,Heat (1995),Action|Crime|Thriller
+6,7,114319,Sabrina (1995),Comedy|Romance
+7,8,112302,Tom and Huck (1995),Adventure|Children
+8,9,114576,Sudden Death (1995),Action
+9,10,113189,GoldenEye (1995),Action|Adventure|Thriller
+10,11,112346,"American President, The (1995)",Comedy|Drama|Romance
+11,12,112896,Dracula: Dead and Loving It (1995),Comedy|Horror
+12,13,112453,Balto (1995),Adventure|Animation|Children
+13,14,113987,Nixon (1995),Drama
+14,15,112760,Cutthroat Island (1995),Action|Adventure|Romance
+15,16,112641,Casino (1995),Crime|Drama
+16,17,114388,Sense and Sensibility (1995),Drama|Romance
+17,18,113101,Four Rooms (1995),Comedy
+18,19,112281,Ace Ventura: When Nature Calls (1995),Comedy
+19,20,113845,Money Train (1995),Action|Comedy|Crime|Drama|Thriller
+20,21,113161,Get Shorty (1995),Comedy|Crime|Thriller
+21,22,112722,Copycat (1995),Crime|Drama|Horror|Mystery|Thriller
+22,23,112401,Assassins (1995),Action|Crime|Thriller
+23,24,114168,Powder (1995),Drama|Sci-Fi
+24,25,113627,Leaving Las Vegas (1995),Drama|Romance
+25,26,114057,Othello (1995),Drama
+26,27,114011,Now and Then (1995),Children|Drama
+27,28,114117,Persuasion (1995),Drama|Romance
+28,29,112682,"City of Lost Children, The (Cité des enfants perdus, La) (1995)",Adventure|Drama|Fantasy|Mystery|Sci-Fi
+29,30,115012,Shanghai Triad (Yao a yao yao dao waipo qiao) (1995),Crime|Drama
+30,31,112792,Dangerous Minds (1995),Drama
+31,32,114746,Twelve Monkeys (a.k.a. 12 Monkeys) (1995),Mystery|Sci-Fi|Thriller
+32,34,112431,Babe (1995),Children|Drama
+33,36,112818,Dead Man Walking (1995),Crime|Drama
+34,38,113442,It Takes Two (1995),Children|Comedy
+35,39,112697,Clueless (1995),Comedy|Romance
+36,40,112749,"Cry, the Beloved Country (1995)",Drama
+37,41,114279,Richard III (1995),Drama|War
+38,42,112819,Dead Presidents (1995),Action|Crime|Drama
+39,43,114272,Restoration (1995),Drama
+40,44,113855,Mortal Kombat (1995),Action|Adventure|Fantasy
+41,47,114369,Seven (a.k.a. Se7en) (1995),Mystery|Thriller
+42,48,114148,Pocahontas (1995),Animation|Children|Drama|Musical|Romance
+43,50,114814,"Usual Suspects, The (1995)",Crime|Mystery|Thriller
+44,53,110299,Lamerica (1994),Adventure|Drama
+45,54,112499,"Big Green, The (1995)",Children|Comedy
+46,60,113419,"Indian in the Cupboard, The (1995)",Adventure|Children|Fantasy
+47,66,116839,Lawnmower Man 2: Beyond Cyberspace (1996),Action|Sci-Fi|Thriller
+48,70,116367,From Dusk Till Dawn (1996),Action|Comedy|Horror|Thriller
+49,77,113973,Nico Icon (1995),Documentary
+50,80,112445,"White Balloon, The (Badkonake sefid) (1995)",Children|Drama
+51,81,114660,Things to Do in Denver When You're Dead (1995),Crime|Drama|Romance
+52,87,116151,Dunston Checks In (1996),Children|Comedy
+53,97,113247,"Hate (Haine, La) (1995)",Crime|Drama
+54,99,113283,Heidi Fleiss: Hollywood Madam (1995),Documentary
+55,101,115734,Bottle Rocket (1996),Adventure|Comedy|Crime|Romance
+56,103,118040,Unforgettable (1996),Mystery|Sci-Fi|Thriller
+57,107,117110,Muppet Treasure Island (1996),Adventure|Children|Comedy|Musical
+58,108,112646,Catwalk (1996),Documentary
+59,111,75314,Taxi Driver (1976),Crime|Drama|Thriller
+60,116,112373,Anne Frank Remembered (1995),Documentary
+61,117,115033,"Young Poisoner's Handbook, The (1995)",Crime|Drama
+62,126,110647,"NeverEnding Story III, The (1994)",Adventure|Children|Fantasy
+63,128,110217,Jupiter's Wife (1994),Documentary
+64,132,113451,Jade (1995),Thriller
+65,137,113756,Man of the Year (1995),Documentary
+66,149,109093,Amateur (1994),Crime|Drama|Thriller
+67,162,109508,Crumb (1994),Documentary
+68,177,113690,Lord of Illusions (1995),Horror
+69,188,114194,"Prophecy, The (1995)",Fantasy|Horror|Mystery
+70,190,114323,Safe (1995),Thriller
+71,196,114508,Species (1995),Horror|Sci-Fi
+72,206,114805,Unzipped (1995),Documentary
+73,210,114938,Wild Bill (1995),Western
+74,220,112643,Castle Freak (1995),Horror
+75,239,113198,"Goofy Movie, A (1995)",Animation|Children|Comedy|Romance
+76,240,113303,Hideaway (1995),Thriller
+77,241,113089,Fluke (1995),Children|Drama
+78,243,113199,Gordy (1995),Children|Comedy|Fantasy
+79,246,110057,Hoop Dreams (1994),Documentary
+80,250,110006,Heavyweights (Heavy Weights) (1995),Children|Comedy
+81,257,113501,Just Cause (1995),Mystery|Thriller
+82,262,113670,"Little Princess, A (1995)",Children|Drama
+83,311,110965,Relative Fear (1994),Horror|Thriller
+84,313,111333,"Swan Princess, The (1994)",Animation|Children
+85,320,108260,Suture (1993),Film-Noir|Thriller
+86,328,114608,Tales from the Crypt Presents: Demon Knight (1995),Horror|Thriller
+87,332,114852,Village of the Damned (1995),Horror|Sci-Fi
+88,335,114788,Underneath (1995),Mystery|Thriller
+89,363,107472,"Wonderful, Horrible Life of Leni Riefenstahl, The (Macht der Bilder: Leni Riefenstahl, Die) (1993)",Documentary
+90,373,105226,Red Rock West (1992),Thriller
+91,383,111756,Wyatt Earp (1994),Western
+92,407,113409,In the Mouth of Madness (1995),Horror|Thriller
+93,416,109198,Bad Girls (1994),Western
+94,422,109297,Blink (1994),Thriller
+95,426,106452,Body Snatchers (1993),Horror|Sci-Fi|Thriller
+96,457,106977,"Fugitive, The (1993)",Thriller
+97,490,107497,Malice (1993),Thriller
+98,512,111003,"Puppet Masters, The (1994)",Horror|Sci-Fi
+99,540,108162,Sliver (1993),Thriller
+100,551,107688,"Nightmare Before Christmas, The (1993)",Animation|Children|Fantasy|Musical
+101,594,29583,Snow White and the Seven Dwarfs (1937),Animation|Children|Drama|Fantasy|Musical
+102,595,101414,Beauty and the Beast (1991),Animation|Children|Fantasy|Musical|Romance|IMAX
+103,596,32910,Pinocchio (1940),Animation|Children|Fantasy|Musical
+104,606,112625,Candyman: Farewell to the Flesh (1995),Fantasy|Horror
+105,616,65421,"Aristocats, The (1970)",Animation|Children
+106,638,113448,Jack and Sarah (1995),Romance
+107,662,116287,Fear (1996),Thriller
+108,695,114736,True Crime (1996),Mystery|Thriller
+109,735,109592,Cemetery Man (Dellamorte Dellamore) (1994),Horror
+110,741,113568,Ghost in the Shell (Kôkaku kidôtai) (1995),Animation|Sci-Fi
+111,745,112691,Wallace & Gromit: A Close Shave (1995),Animation|Children|Comedy
+112,880,116654,"Island of Dr. Moreau, The (1996)",Sci-Fi|Thriller
+113,900,43278,"American in Paris, An (1951)",Musical|Romance
+114,904,47396,Rear Window (1954),Mystery|Thriller
+115,913,33870,"Maltese Falcon, The (1941)",Film-Noir|Mystery
+116,918,37059,Meet Me in St. Louis (1944),Musical
+117,930,38787,Notorious (1946),Film-Noir|Romance|Thriller
+118,931,38109,Spellbound (1945),Mystery|Romance|Thriller
+119,938,51658,Gigi (1958),Musical
+120,963,41509,"Inspector General, The (1949)",Musical
+121,976,22879,"Farewell to Arms, A (1932)",Romance|War
+122,1035,59742,"Sound of Music, The (1965)",Musical|Romance
+123,1055,120107,Shadow Conspiracy (1997),Thriller
+124,1137,116587,Hustler White (1996),Romance
+125,1199,88846,Brazil (1985),Fantasy|Sci-Fi
+126,1212,41959,"Third Man, The (1949)",Film-Noir|Mystery|Thriller
+127,1339,103874,Dracula (Bram Stoker's Dracula) (1992),Fantasy|Horror|Romance|Thriller
+128,1398,116621,In Love and War (1996),Romance|War
+129,1459,118548,Absolute Power (1997),Mystery|Thriller
+130,1475,116743,Kama Sutra: A Tale of Love (1996),Romance
+131,1477,119572,Love Jones (1997),Romance
+132,1493,116931,Love and Other Catastrophes (1996),Romance
+133,1514,116295,Temptress Moon (Feng Yue) (1996),Romance
+134,1574,119098,Fall (1997),Romance
+135,1658,119535,"Life Less Ordinary, A (1997)",Romance|Thriller
+136,1779,120184,Sphere (1998),Sci-Fi|Thriller
+137,1926,19729,"Broadway Melody, The (1929)",Musical
+138,2066,39689,Out of the Past (1947),Film-Noir
+139,2187,42994,Stage Fright (1950),Mystery|Romance|Thriller
+140,2206,34248,Suspicion (1941),Film-Noir|Mystery|Thriller
+141,2311,86837,2010: The Year We Make Contact (1984),Sci-Fi
+142,2327,100740,Tales from the Darkside: The Movie (1990),Fantasy|Horror|Thriller
+143,2401,89767,Pale Rider (1985),Western
+144,2526,79550,Meteor (1979),Sci-Fi
+145,2661,45920,It Came from Outer Space (1953),Sci-Fi
+146,2665,49169,Earth vs. the Flying Saucers (1956),Sci-Fi
+147,2669,53183,Pork Chop Hill (1959),War
+148,2670,52151,Run Silent Run Deep (1958),War
+149,2698,120554,Zone 39 (1997),Sci-Fi
+150,2877,73812,Tommy (1975),Musical
+151,2896,60095,Alvarez Kelly (1966),Western
+152,2921,68699,High Plains Drifter (1973),Western
+153,2941,52225,South Pacific (1958),Musical|Romance|War
+154,3037,65988,Little Big Man (1970),Western
+155,3074,68762,Jeremiah Johnson (1972),Western
+156,3081,162661,Sleepy Hollow (1999),Fantasy|Horror|Mystery|Romance
+157,3315,43618,Happy Go Lovely (1951),Musical
+158,3354,183523,Mission to Mars (2000),Sci-Fi
+159,3355,142688,"Ninth Gate, The (1999)",Fantasy|Horror|Mystery|Thriller
+160,3474,117468,Retroactive (1997),Sci-Fi|Thriller
+161,3604,56048,Gypsy (1962),Musical
+162,3706,92563,Angel Heart (1987),Film-Noir|Horror|Mystery|Thriller
+163,3806,64615,Mackenna's Gold (1969),Western
+164,3937,88024,Runaway (1984),Sci-Fi|Thriller
+165,4105,83907,"Evil Dead, The (1981)",Fantasy|Horror|Thriller
+166,4129,93467,Made in Heaven (1987),Fantasy|Romance
+167,4329,53221,Rio Bravo (1959),Western
+168,4426,48261,Kiss Me Deadly (1955),Film-Noir
+169,4496,94933,D.O.A. (1988),Film-Noir|Mystery|Thriller
+170,4927,76299,"Last Wave, The (1977)",Fantasy|Mystery|Thriller
+171,6434,37954,"Objective, Burma! (1945)",War
+172,7335,46187,Pickup on South Street (1953),Film-Noir
+173,60389,870211,Battle for Haditha (2007),War
