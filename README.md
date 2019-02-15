@@ -124,7 +124,7 @@ In UUCF the main idea is that, the algorithm finds the User's most similar to th
 ### 2.2. Item Item Collaborative Filtering (IICF)
 In IICF the algorithm selects the movies most closest to the movies the user has already rated and takes this similarity score and ratings of the movies the user has rated into consideration and gives suggestions based on the highest ratings predicted. The similarity is based on Pearson Correlation.
 ### 3.3. Matrix Factorisation (MF)
-
+The strength of matrix factorization is the that it can gather information that are not seen directly but can be visualized by analyzing user's behavior. Using this criteria we can judge the user's opinion regarding th particular movie. This method is the most viable option for recommender systems.
 
 
 
@@ -140,7 +140,17 @@ The Gunicorn "Green Unicorn" is a Python Web Server Gateway Interface HTTP serve
 
 # 4. Docker Container
 ### 4.2. Dockerfile
-The `Dockerfile`  is included in the root of this repository, and can be build from within this directory by running `docker build --tag=moviers .`  to build and `docker run -p 5000:5000 moviers` to map the port `5000` of the docker container to your machines port: `5000` this can be easily conffigured as per your requirements.  Then visit `localhost:5000` in your web-browser.
+The `Dockerfile`  is included in the root of this repository, and can be build from within this directory using:
+
+```
+docker build --tag=moviers .
+```
+
+and then run:
+```
+docker run -p 5000:5000 moviers
+```
+to map the port `5000` of the docker container to your machines port: `5000` this can be easily conffigured as per your requirements.  Then visit `localhost:5000` in your web-browser.
 
 
 
